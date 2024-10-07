@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammad Khatib - About Me</title>
+    <style>
+        /* التنسيق العام للصفحة */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0; /* لون خلفية الصفحة */
+            color: #333;
+        }
+
+        /* تنسيق شريط القائمة */
+        header {
+            background-color: #1abc9c; /* لون خلفية شريط القائمة */
+            padding: 10px 0;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            background-color: #16a085; /* لون التفاعل عند التمرير */
+            border-radius: 5px;
+        }
+
+        /* تنسيق الصفحة الرئيسية */
+        section#about {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #ffffff;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section#about img {
+            width: 200px;
+            height: auto;
+            border-radius: 50%;
+            margin-top: 20px;
+        }
+
+        section#about h1 {
+            font-size: 36px;
+            color: #2c3e50; /* لون العنوان */
+        }
+
+        section#about p {
+            font-size: 18px;
+            color: #7f8c8d; /* لون الفقرة */
+            margin: 20px 0;
+        }
+
+        /* تنسيق قسم الهوايات */
+        section#hobbies {
+            padding: 20px;
+            background-color: #ecf0f1;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        section#hobbies h2 {
+            font-size: 28px;
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        section#hobbies ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        section#hobbies li {
+            text-align: center;
+        }
+
+        section#hobbies li img {
+            width: 100px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        section#hobbies li a {
+            display: block;
+            color: #1abc9c;
+            font-size: 18px;
+            margin-top: 10px;
+            text-decoration: none;
+        }
+
+        section#hobbies li a:hover {
+            text-decoration: underline;
+        }
+
+        /* تنسيق قسم الطموحات */
+        section#future {
+            padding: 20px;
+            background-color: #ffffff;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        section#future h2 {
+            font-size: 28px;
+            color: #2c3e50;
+        }
+
+        section#future p {
+            font-size: 18px;
+            color: #7f8c8d;
+        }
+
+        /* تنسيق قسم المشاريع السابقة */
+        section#project {
+            padding: 20px;
+            background-color: #ecf0f1;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        section#project h2 {
+            font-size: 28px;
+            color: #2c3e50;
+        }
+
+        section#project a {
+            font-size: 18px;
+            color: #1abc9c;
+            text-decoration: none;
+        }
+
+        section#project a:hover {
+            text-decoration: underline;
+        }
+
+        /* تنسيق قسم التخمين */
+        section#guess {
+            padding: 20px;
+            background-color: #ffffff;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        section#guess h2 {
+            font-size: 28px;
+            color: #2c3e50;
+        }
+
+        section#guess form {
+            margin-top: 20px;
+        }
+
+        section#guess label {
+            font-size: 18px;
+        }
+
+        section#guess select {
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        section#guess button {
+            background-color: #1abc9c;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        section#guess button:hover {
+            background-color: #16a085;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- شريط التنقل -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#future">Future Ambitions</a></li>
+                <li><a href="#project">Previous Projects</a></li>
+                <li><a href="#guess">Guess My Favorite Hobby</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- هون نبذة عني -->
+    <section id="about">
+        <h1>Mohammad Khatib</h1>
+        <img src="khatib.png" alt="my_project">
+        <p>I am Mohammad Khatib, 20 years old, living in Nablus. I study Computer Science at An-Najah University. I love playing and watching football, and I am passionate about improving my programming skills.</p>
+    </section>
+
+    <!-- هون الهوايات -->
+    <section id="hobbies">
+        <h2>Hobbies</h2>
+        <ul>
+            <li>
+                <img src="saka.jpg" alt="my_project">
+                <a href="https://en.wikipedia.org/wiki/Football" target="_blank">Football</a>
+            </li>
+            <li>
+                <img src="movie.jpg" alt="my_project">
+                <a href="https://en.wikipedia.org/wiki/Film" target="_blank">Watching Movies & Series</a>
+            </li>
+            <li>
+                <img src="history.jpg" alt="my_project">
+                <a href="https://en.wikipedia.org/wiki/History_of_Islam" target="_blank">Islamic History & Wars</a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- هون الطموح  -->
+    <section id="future">
+        <h2>Future Ambitions</h2>
+        <p>My ambition is to graduate, find a suitable job in my field, and live a decent and beautiful life. One day, I hope to work at Google or another major tech company, and have a beautiful family.</p>
+    </section>
+
+    <!-- هون المشاريع السابقة -->
+    <section id="project">
+        <h2>Previous Projects</h2>
+        <p>Check out one of my previous projects:</p>
+        <a href="https://github.com/mohammad-khatib1/khatib.git" target="_blank">My Project on GitHub</a>
+    </section>
+
+    <!-- هون بتخمن ايش هي هوايتي المفضلة-->
+    <section id="guess">
+        <h2>Guess My Favorite Hobby</h2>
+        <form>
+            <label for="hobby">Which hobby do you think is my favorite?</label><br>
+            <select id="hobby" name="hobby">
+                <option value="football">Football</option>
+                <option value="movies">Watching Movies & Series</option>
+                <option value="history">Islamic History & Wars</option>
+            </select><br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+</body>
+</html>
